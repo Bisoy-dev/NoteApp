@@ -1,0 +1,31 @@
+<div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+        <mat-card matCardContent>
+            <mat-card-title>
+                Login
+            </mat-card-title>
+            <div class="col">
+                <mat-form-field appearance="outline" class="ctrl">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text" formControlName="email">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="ctrl">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'text' : 'password'" formControlName="password" />
+                    <button mat-icon-button matSuffix type="button" (click)="hide = !hide">
+                        <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <mat-error *ngIf="errMessage" align="center">{{ errMessage?.error?.message }}</mat-error>
+                <button mat-raised-button color="primary" [disabled]="submit">
+                    <div class="btn-content">
+                        <mat-progress-spinner color="warn" mode="indeterminate" class="spinner" diameter="32"
+                            *ngIf="submit">
+                        </mat-progress-spinner>
+                        <span *ngIf="!submit">Login</span>
+                    </div>
+                </button>
+            </div>
+        </mat-card>
+    </form>
+</div>

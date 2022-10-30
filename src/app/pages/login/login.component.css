@@ -1,0 +1,43 @@
+.form-container {
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: beige; */
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50vh;
+}
+
+.spinner {
+    margin: 1px;
+}
+
+.btn-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    flex: 1;
+}
